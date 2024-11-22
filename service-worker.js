@@ -1,20 +1,20 @@
 const CACHE_NAME = 'precisionview-cache-v1';
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/styles.css',
-    '/script.js',
-    '/manifest.json',
-    '/icons/icon-72x72.png',
-    '/icons/icon-96x96.png',
-    '/icons/icon-128x128.png',
-    '/icons/icon-144x144.png',
-    '/icons/icon-152x152.png',
-    '/icons/icon-192x192.png',
-    '/icons/icon-384x384.png',
-    '/icons/icon-512x512.png',
+    '/precisionview-windows/',
+    '/precisionview-windows/index.html',
+    '/precisionview-windows/styles.css',
+    '/precisionview-windows/script.js',
+    '/precisionview-windows/manifest.json',
+    '/precisionview-windows/icons/icon-72x72.png',
+    '/precisionview-windows/icons/icon-96x96.png',
+    '/precisionview-windows/icons/icon-128x128.png',
+    '/precisionview-windows/icons/icon-144x144.png',
+    '/precisionview-windows/icons/icon-152x152.png',
+    '/precisionview-windows/icons/icon-192x192.png',
+    '/precisionview-windows/icons/icon-384x384.png',
+    '/precisionview-windows/icons/icon-512x512.png',
     'https://kit.fontawesome.com/a076d05399.js',
-    '/hero-background.jpg'
+    '/precisionview-windows/hero-background.jpg'
 ];
 
 // Install Service Worker
@@ -54,7 +54,7 @@ self.addEventListener('fetch', event => {
             })
             .catch(() => {
                 // Return offline page if available
-                return caches.match('/offline.html');
+                return caches.match('/precisionview-windows/offline.html');
             })
     );
 });

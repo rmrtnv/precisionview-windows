@@ -116,7 +116,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register Service Worker
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js')
+            navigator.serviceWorker.register('/precisionview-windows/service-worker.js', {
+                scope: '/precisionview-windows/'
+            })
                 .then(registration => {
                     console.log('ServiceWorker registration successful');
                 })
